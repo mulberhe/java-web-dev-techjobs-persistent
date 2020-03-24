@@ -43,7 +43,7 @@ public class ListController {
         model.addAttribute("employers",employerRepository.findAll());
         model.addAttribute("skills",skillRepository.findAll());
 
-        return "list";
+              return "list";
     }
 
     @RequestMapping(value = "jobs")
@@ -58,6 +58,6 @@ public class ListController {
         }
         model.addAttribute("jobs", jobs);
 
-        return "list-jobs";
+               return "list-jobs";
     }
 }

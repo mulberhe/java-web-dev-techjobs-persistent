@@ -53,22 +53,23 @@ private JobRepository jobRepository;
             model.addAttribute("title", "Add Job");
             model.addAttribute("skills",skillRepository.findAll());
             model.addAttribute("employers",employerRepository.findAll());
-            if(skills==null){
+        if(skills==null){
                 model.addAttribute("skillsError","Skill is required");
             }
-            if(employerId==null){
-                model.addAttribute("employerError","Employer is required");
+
+        if(employerId==null){
+               model.addAttribute("employerError","Employer is required");
             }
-            return "add";
+           return "add";
         }
         if(employerId ==null){
             model.addAttribute("employerError","Employer is required");
             model.addAttribute("title", "Add Job");
             model.addAttribute("skills",skillRepository.findAll());
             model.addAttribute("employers",employerRepository.findAll());
-            if(skills==null){
-                model.addAttribute("skillsError","Skill is required");
-            }
+        if(skills==null) {
+                model.addAttribute("skillsError", "Skill is required");
+        }
             return "add";
         }
         if(skills==null){
@@ -76,7 +77,7 @@ private JobRepository jobRepository;
             model.addAttribute("title", "Add Job");
             model.addAttribute("skills",skillRepository.findAll());
             model.addAttribute("employers",employerRepository.findAll());
-            return "add";
+           return "add";
         }
         Optional<Employer> optEmployer = employerRepository.findById(employerId);
         if (optEmployer.isPresent()) {

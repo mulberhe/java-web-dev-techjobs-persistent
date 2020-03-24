@@ -13,7 +13,7 @@ public class Skill extends AbstractEntity {
     List<Job> jobs = new ArrayList<>();
 
     @NotBlank(message = "description is required")
-    @Size(max = 250, message = "description shouldn't exceed 250 characters")
+    @Size(max = 500, message = "description shouldn't exceed 500 characters")
     private String description;
 
     public String getDescription() {

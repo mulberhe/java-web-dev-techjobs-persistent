@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 public class Employer extends AbstractEntity {
 
-    @NotBlank(message = "field is required")
+    @NotBlank(message = "location is required")
     @Size(max = 50, message = "location shouldn't exceed 50 characters")
     private String location;
 
