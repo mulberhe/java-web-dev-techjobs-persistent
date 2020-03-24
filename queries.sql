@@ -16,6 +16,6 @@ DROP TABLE techjobs.job
 
 ## Part 4: Test it with SQL
 SELECT distinct s.name, s.description
-FROM job j, job_skills js, skill s
-WHERE j.id=js.jobs_id and s.id=js.skills_id
+FROM skill s, job j, job_skills js
+WHERE s.id=js.skills_id AND j.id=js.jobs_id
 ORDER BY name, description asc;
